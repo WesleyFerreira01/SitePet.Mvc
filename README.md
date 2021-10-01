@@ -14,10 +14,11 @@ criamos um website para cadastro de pets ainda esta no começo e irei implementa
 
 #### Para cadastar e editar um filme o usuario precisa está logado
 
+
 <p align="center">
-	<img width="1000" height="700" src="src/Site.App/wwwroot/img/AdoteumPetGif1.gif"
+	<img width="1000" height="700" src="SitePet.Mvc/wwwroot/img/AdoteumPetGif1.gif"
 </p>
 
 <p align="center">
-	<img width="1000" height="700" src="src/Site.App/wwwroot/img/AdoteumPetGif2.gif"
+	<img width="1000" height="700" src="SitePet.Mvc/wwwroot/img/AdoteumPetGif2.gif"
 </p>
