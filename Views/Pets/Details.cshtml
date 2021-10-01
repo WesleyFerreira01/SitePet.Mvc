@@ -1,0 +1,84 @@
+﻿@model SitePet.Mvc.ViewModels.PetViewModel
+@using SitePet.Mvc.Models;
+
+@{
+
+    ViewData["Title"] = "Detalhes do Pet ";
+
+
+}
+
+<h1 class="text-center" style="padding-top: 50px">@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-7">
+        <img src="~/imagens/@Model.Imagem" alt="@Model.Imagem" style="width: 380px; height: 328px; border:3px solid blue" />
+    </div>
+
+    <div class="col-md-5">
+        <dl>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Raca)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Raca)
+            </dd>
+
+            @if (Model.Tipo == 1)
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Tipo.Gato
+                </dd>
+            }
+            else if (Model.Tipo == 2)
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Tipo.Cachorro
+                </dd>
+            }
+
+            @if (Model.Genero == 1)
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Genero)
+                </dt>
+                <dd class="col-sm-10">
+                    @Genero.Femea
+                </dd>
+            }
+            else if (Model.Genero == 2)
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Genero)
+                </dt>
+                <dd class="col-sm-10">
+                    @Genero.Macho
+                </dd>
+            }
+
+
+
+        </dl>
+        <div class="ml-2">
+            <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Excluir</a>
+        </div>
+
+
+    </div>
+
+
+</div>
